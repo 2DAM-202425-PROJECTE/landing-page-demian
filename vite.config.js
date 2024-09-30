@@ -1,4 +1,4 @@
 export default {
 // config options
-    base: /landing-page-demian/
+    base: '/landing-page-demian/'
 }
