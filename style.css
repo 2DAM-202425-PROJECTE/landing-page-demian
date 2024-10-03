@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    height: fit-content;
+}
+header {
+    position: fixed;
+}
+.hheader  {
+    height: 60px; /* Set the height of the element */
+    background: linear-gradient(to bottom, white, transparent);
+}
 /*
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
