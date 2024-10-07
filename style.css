@@ -7,10 +7,18 @@ body {
 }
 header {
     position: fixed;
+    backdrop-filter: blur(7px);
+    height: 60px; /* Set the height of the element */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(255, 0, 0, 0));
+    filter: drop-shadow(10px 0px 4px #808080);
 }
 .hheader  {
-    height: 60px; /* Set the height of the element */
-    background: linear-gradient(to bottom, white, transparent);
+
+
+}
+.blend2{
+    mix-blend-mode: hard-light;
+
 }
 /*
 :root {
