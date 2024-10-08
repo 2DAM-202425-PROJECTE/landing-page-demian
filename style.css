@@ -1,16 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     height: fit-content;
 }
 header {
     position: fixed;
-    backdrop-filter: blur(7px);
-    height: 60px; /* Set the height of the element */
+    backdrop-filter: blur(10px);
+    height: 58px; /* Set the height of the element */
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(255, 0, 0, 0));
-    filter: drop-shadow(10px 0px 4px #808080);
+    filter: drop-shadow(5px 0px 4px #808080);
 }
 .hheader  {
 
@@ -20,6 +23,177 @@ header {
     mix-blend-mode: hard-light;
 
 }
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background: #f4f4f4;
+}
+
+.skills-section{
+    padding-top: 20px;
+}
+
+.skills-header{
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+    position: relative;
+}
+
+.skills-header:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: #2ecc71;
+    border-radius: 2px;
+}
+
+.skills-container{
+    display: grid;
+    grid-tempLate-columns: repeat(5, 1fr);
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+    grid-gap:1rem;
+    padding: 1rem 80px;
+    font-size: 1.2rem;
+}
+.skills-box{
+    padding: 1rem;
+    color: #000;
+    cursor:pointer;
+}
+.skills-box:hover > .skills-title:after,
+.skills-box:hover > .skills-title:before{
+    width: 30px;
+}
+.skills-box:hover .skills-img{
+    transform: translateX(-20px);
+}
+
+.skills-title{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.skills-title:after{
+    content: '';
+    position:absolute;
+    bottom: 0;
+    rigth: 50%;
+    width:20px;
+    height:4px;
+    border-radius: 2px 0 0 2px;
+    background-color: #2ecc71;
+    transition: .5s;
+}
+
+.skills-title:before{
+    content: '';
+    position:absolute;
+    bottom: 0;
+    left: 50%;
+    width:100px;
+    height:4px;
+    border-radius: 0 2px 2px 0;
+    background-color: #2ecc71;
+}
+
+.skills-icons{
+    width:50px;
+    z-index:2;
+}
+
+.skills-img{
+    width:90px;
+    height:90px;
+    position: relative;
+    border-radius: 45px;
+    background-color: #fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition: .5s;
+}
+
+.skills-img:after{
+    content: '';
+    position:absolute;
+    top:0;
+    left: 0;
+    width:50%;
+    height:90px;
+    background: rgba(100, 100, 100, 0.5);
+    border-radius: 45px 0 0 45px;
+}
+.skills-title h3{
+    color: #333;
+    margin-top: 0.5rem;
+}
+@media screen and (max-width:990px){
+    .skills-container{
+        grid-tempLate-columns: repeat(2, 1fr);
+        padding: 2rem 50px;
+    }
+}
+
+@media screen and (max-width:650px){
+    .skills-container{
+        grid-tempLate-columns:2fr;
+        padding: 2rem 50px;
+    }
+}
+
+
+
+.head-text {
+
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.head-text:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -15px;
+    height: 3px;
+    background-color: #007BFF; /* Change this color as needed */
+    width: 0;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.head-text:hover:before {
+    width: 100%;
+    left: 0;
+}
+
+.head-text:hover {
+    color: #007BFF; /* Change text color on hover */
+}
+
+
+
+
+
+
+
 /*
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
