@@ -13,12 +13,36 @@ header {
     backdrop-filter: blur(10px);
     height: 58px; /* Set the height of the element */
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(255, 0, 0, 0));
-    filter: drop-shadow(5px 0px 4px #808080);
+    filter: drop-shadow(5px 0px 4px rgba(71, 71, 71, 0.87));
+
 }
 .hheader  {
 
 
 }
+
+
+
+.hide{
+    opacity: 0;
+    filter: blur(2px);
+    transform: translateX(-8%);
+    transition: all 1200ms;
+}
+.show{
+
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+}
+@media (prefers-reduced-motion) {
+    .hidden{
+        transition:none
+    }
+    
+}
+
+
 .blend2{
     mix-blend-mode: hard-light;
 
@@ -54,14 +78,14 @@ body{
     left: 50%;
     transform: translateX(-50%);
     width: 100px;
-    height: 4px;
-    background-color: #2ecc71;
+    height: 6px;
+    background-color: #1245ed;
     border-radius: 2px;
 }
 
 .skills-container{
     display: grid;
-    grid-tempLate-columns: repeat(5, 1fr);
+    grid-tempLate-columns: repeat(3, 1fr);
     justify-content:center;
     align-items:center;
     text-align: center;
@@ -76,7 +100,7 @@ body{
 }
 .skills-box:hover > .skills-title:after,
 .skills-box:hover > .skills-title:before{
-    width: 30px;
+
 }
 .skills-box:hover .skills-img{
     transform: translateX(-20px);
@@ -96,10 +120,10 @@ body{
     position:absolute;
     bottom: 0;
     rigth: 50%;
-    width:20px;
-    height:4px;
+    width:40px;
+    height:6px;
     border-radius: 2px 0 0 2px;
-    background-color: #2ecc71;
+    background-color: #39cc2e;
     transition: .5s;
 }
 
@@ -109,9 +133,9 @@ body{
     bottom: 0;
     left: 50%;
     width:100px;
-    height:4px;
+    height:6px;
     border-radius: 0 2px 2px 0;
-    background-color: #2ecc71;
+    background-color: rgba(109, 204, 46, 0.29);
 }
 
 .skills-icons{
